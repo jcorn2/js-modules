@@ -17,17 +17,30 @@
             The development of Node.js made it necessary to have a module
             system in JavaScript that did not rely on HTML script tags. Node.js
             applications do not run in a browser so script tags are not 
-            available. A standards organization call CommonJS developed a 
-            standard for modules in JavaScript that Node.js adopted. 
+            available. Node.js developed a module systems based off a standard  
+            defined by a project called CommonJS. This system allows modules to 
+            declare which dependencies that they require in the module itself.
+            
+            CommonJS modules were not designed to work in a browser. Module
+            bundlers such as Browserify and Webpack were developed to allow you
+            to write browser code using CommonJS modules. Module bundlers work
+            by going through your code to find all your dependencies and bundles
+            all the necessary code into one file. This one file is then included
+            on an HTML page in a script tag.
+            
+            Problems still remain with using CommonJS modules in a browser.
         </p>
         <ul>
-            <li>A variable is still added to the global namespace</li>
-            <li>Doesn't improve dependency management.</li>
-            <li>Every script needs to be wrapped in an iife</li>
+            <li>Browsers do not natively support it</li>
+            <li>Modules are loaded synchronously</li>
         </ul>
+        <p>
+            Around the same time, other module systems were developed such as
+            Asynchronous Module Definition and Universal Module Definition.
+            These systems were designed to address some of the issues with 
+            using CommonJS in browsers but they had their own issues too.
+        </p>
     </div>
-    <script src="./greetings.js"></script>
-    <script src="./sayHello.js"></script>
-    <script src="./sayGoodbye.js"></script>
+    <script src="./build/main.js"></script>
 </body>
 </html>
