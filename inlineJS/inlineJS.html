@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline JS Example</title>
+</head>
+<body>
+    <div>Click the button to say hello </div>
+    <div>
+        <button id="hello-button">Say Hello</button>
+        <button id="goodbye-button">Say Goodbye</button>
+    </div>
+    <div id="greeting-box"></div>
+    <div>
+        <p style="max-width: 80ch;">
+            Inline JavaScript is when you write JavaScript code directly on an HTML
+            page in a script tag. This is the simpiliest way to get JavaScript on a
+            page but should only be used for learning purposes. The problems with 
+            inline JavaScript include:
+        </p>
+        <ul>
+            <li>No ability to reuse JavaScript code</li>
+            <li>Variables and functions are added to global namespace</li>
+            <li>
+                Not easy to add libraries or othe code that you have written. Have to
+                add code to page and make sure that everything is in the right order.
+            </li>
+        </ul>
+    </div>
+    <script>
+        var button = document.getElementById('hello-button');
+        function sayHello() {
+            var greetingBox = document.getElementById('greeting-box');
+            greetingBox.innerHTML = 'Hello World';
+        }
+        button.addEventListener('click', sayHello);
+        var button = document.getElementById('goodbye-button');
+        function sayGoodBye() {
+            var greetingBox = document.getElementById('greeting-box');
+            greetingBox.innerHTML = 'Goodbye for now World';
+        }
+        button.addEventListener('click', sayGoodBye);
+    </script>
+</body>
+</html>

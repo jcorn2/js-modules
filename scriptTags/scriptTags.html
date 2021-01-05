@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script Tag Example</title>
+</head>
+<body>
+    <div>Click the button to say hello </div>
+    <div>
+        <button id="hello-button">Say Hello</button>
+        <button id="goodbye-button">Say Goodbye</button>
+    </div>
+    <div id="greeting-box"></div>
+    <div>
+        <p style="max-width: 80ch;">
+            Script tags allow you to reuse JavaScript code without having to place
+            it directly in every file you want to use it in. Problems still exist
+            with this approach including:
+        </p>
+        <ul>
+            <li>Variables and functions are added to global namespace</li>
+            <li>
+                Dependency management is still difficult. Script tags need to be
+                place before any JavaScript code that references it.
+            </li>
+        </ul>
+    </div>
+    <script src="./sayHello.js"></script>
+    <script src="./sayGoodbye.js"></script>
+</body>
+</html>

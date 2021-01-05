@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIFE Example</title>
+</head>
+<body>
+    <div>Click the button to say hello </div>
+    <div>
+        <button id="hello-button">Say Hello</button>
+        <button id="goodbye-button">Say Goodbye</button>
+    </div>
+    <div id="greeting-box"></div>
+    <div>
+        <p style="max-width: 80ch;">
+            The iife pattern was developed to avoid adding variables and functions 
+            to the global namespace. An iife stands for an immediately invoked 
+            function expression. By wrapping the contents of your script in an iife,
+            the script's variables and functions are scoped to the function and not
+            the global namespace. To make any variables or functions from your script
+            accessible outside of the iife, they need to be added to an object contain
+            in the global scope. This method reduces the number of variables and 
+            functions added to the global scope to just one object. While this method
+            is an improvement, some issues still remain.
+        </p>
+        <ul>
+            <li>A variable is still added to the global namespace</li>
+            <li>Doesn't improve dependency management.</li>
+            <li>Every script needs to be wrapped in an iife</li>
+        </ul>
+    </div>
+    <script src="./greetings.js"></script>
+    <script src="./sayHello.js"></script>
+    <script src="./sayGoodbye.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CommonJS Example</title>
+</head>
+<body>
+    <div>Click the button to say hello </div>
+    <div>
+        <button id="hello-button">Say Hello</button>
+        <button id="goodbye-button">Say Goodbye</button>
+    </div>
+    <div id="greeting-box"></div>
+    <div>
+        <p style="max-width: 80ch;">
+            The development of Node.js made it necessary to have a module
+            system in JavaScript that did not rely on HTML script tags. Node.js
+            applications do not run in a browser so script tags are not 
+            available. A standards organization call CommonJS developed a 
+            standard for modules in JavaScript that Node.js adopted. 
+        </p>
+        <ul>
+            <li>A variable is still added to the global namespace</li>
+            <li>Doesn't improve dependency management.</li>
+            <li>Every script needs to be wrapped in an iife</li>
+        </ul>
+    </div>
+    <script src="./greetings.js"></script>
+    <script src="./sayHello.js"></script>
+    <script src="./sayGoodbye.js"></script>
+</body>
+</html>
